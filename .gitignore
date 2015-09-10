@@ -33,3 +33,17 @@
 *.i*86
 *.x86_64
 *.hex
+
+# Visual Studio files
+*.tlog
+*.log
+*.ilk
+*.lastbuildstate
+*.pdb
+*.idb
+*.sdf
+*.sln
+*.suo
+*.vcxproj
+*.vcproj
+*.filters
