@@ -1,0 +1,31 @@
+Please run RC Tank software (executable file must be installed to Raspberry Pi OS)
+with the following command line options:
+--cfg=<path_to_file>  /* mandatory */
+    Absolute or relative path to device configuration file. It is about wiring to
+    Raspberry's GPIO pins.
+[obsolete] --ctrl={keyboard || wifi || irrc || radio}
+    keyboard: is a keyboard+mouse (if available) dongle attached rigth to the
+        Raspberry's USB ports.
+    wifi_usb: if a WiFi transceiver is available it is being used for listening, if
+        it is not RC Tank will fail to start. It is about an USB-based WiFi 
+        transmitter.
+    wifi_gpio: if a WiFi transceiver is available it is being used for listening, if
+        it is not RC Tank will fail to start. It is about a GPIO-based WiFi 
+        transmitter.
+    irrc: IR remote control of your TV. IR transceiver (or receiver) must be available.
+    radio: XX MHz radio transceiver (or receiver). A GPIO-based device of corresponding
+        type must be available.
+    blue_usb: <a USB Blue-Tooth transceiver>.
+    blue_gpio: <a GPIO-based Blue-Tooth transceiver>.
+--assert_gpio=<GPIO number>
+    WiringPi pin numbering is used. 0 .. 29 values are allowed (please check WiringPi
+    docs).
+--profile=<path_to_file>
+    Absolute or relative path to profile file.
+--log=<path_to_file>
+    Absolute or relative path to Logger's log-file. If defined, it will be used anyway (see
+	the "--logger=" param).
+--logger={std || pipe}
+    Use '+' to join optional values.
+	std: stdout.
+	pipe: transmit to separate process over a standard pipe.
